@@ -1,0 +1,24 @@
+<?xml version="1.1" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.6.xsd">
+
+    <changeSet author="baobao (generated)" id="1570521735490-1">
+        <preConditions onFail="MARK_RAN">
+            <not>
+                <tableExists tableName="exchange_rate" />
+            </not>
+        </preConditions>
+        <createTable tableName="exchange_rate">
+            <column name="date" type="VARCHAR(255)">
+                <constraints primaryKey="true" primaryKeyName="exchange_rate_pkey"/>
+            </column>
+            <column name="aed" type="FLOAT8"/>
+            <column name="chf" type="FLOAT8"/>
+            <column name="eur" type="FLOAT8"/>
+            <column name="gbp" type="FLOAT8"/>
+            <column name="usd" type="FLOAT8"/>
+            <column name="zar" type="FLOAT8"/>
+        </createTable>
+    </changeSet>
+</databaseChangeLog>

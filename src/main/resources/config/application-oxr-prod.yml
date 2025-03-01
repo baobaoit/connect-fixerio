@@ -1,0 +1,37 @@
+spring:
+  profiles:
+    include: default
+  mail:
+    host: email-smtp.eu-west-1.amazonaws.com
+    port: 587
+    username: AKIAIOEXEHQINVURKSUA
+    password: Ajtt03mA3M6yfJ3908TwyOVH3DB28Xgsyx8JG6N9A9im
+    properties:
+      mail.transport.protocol: smtp
+      mail.smtp.auth: true
+      mail.smtp.starttls.enable: true
+      mail.smtp.starttls.required: true
+    protocol: smtp
+  thymeleaf:
+    cache: true
+
+logging:
+  level:
+    root: INFO
+
+exchange-rates:
+  access-key: 9080f133e06042aabacf8e9a15d693dc
+  default-base-currency: "USD"
+  base-url: https://openexchangerates.org/api/
+
+ewm:
+  notification-service:
+    technical-support: khiem.truong@ewm-tech.com;jad.boudib@ewm.cards
+
+email:
+  noreply: noreply.ewm@gmail.com
+
+period:
+  delay-time: 10
+  fail-attempt-threshold-amount:
+    fixer-attempts: 3

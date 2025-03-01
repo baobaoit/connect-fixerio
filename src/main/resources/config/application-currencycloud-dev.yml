@@ -1,0 +1,38 @@
+spring:
+  profiles:
+    include: default
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: noreply.ewm@gmail.com
+    password: DTuNgpzD1@@
+    properties:
+      mail.transport.protocol: smtp
+      mail.smtp.auth: true
+      mail.smtp.starttls.enable: true
+      mail.smtp.starttls.required: true
+    protocol: smtp
+  thymeleaf:
+    cache: false
+
+logging:
+  level:
+    web: DEBUG
+
+exchange-rates:
+  access-key: d4bcdcbaa7d17eee237354333b3cf69e63467f6eeaefd6ddfd442f04dc0222c4
+  login-id: testhierry
+  default-base-currency: "USD"
+  base-url: https://api.currencycloud.com/v2
+
+ewm:
+  notification-service:
+    technical-support: khoa.nguyen@hesmantech.com
+
+period:
+  delay-time: 10
+  fail-attempt-threshold-amount:
+    fixer-attempts: 3
+
+email:
+  noreply: noreply.ewm@gmail.com
